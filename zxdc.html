@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <title>Hack Map Crack</title>
+  <style>
+    :root{
+      --blue:#2d8cff;
+      --bg:#f6f7f9;
+      --muted:#6b7280;
+      --card:#fff;
+      --text:#0b1220;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:-apple-system, "SF Pro Text", "Segoe UI", Roboto, "Helvetica Neue", Arial; background:var(--bg); color:var(--text); -webkit-font-smoothing:antialiased}
+    a{color:inherit;text-decoration:none}
+
+    /* Top appbar */
+    .appbar{position:sticky;top:0;background:#fff;border-bottom:1px solid #e9e9e9;z-index:40;backdrop-filter: blur(6px)}
+    .appbar-inner{max-width:980px;margin:0 auto;padding:10px 16px;display:flex;align-items:center;gap:12px}
+    .appstore-icon{height:22px;opacity:.96}
+    .appbar-title{font-weight:700;font-size:18px}
+
+    /* Container */
+    .container{max-width:980px;margin:0 auto;padding:16px 16px 90px}
+
+    /* Hero section: icon + info */
+    .hero{display:flex;gap:14px;align-items:flex-start;margin-bottom:18px}
+    .app-icon-wrap{width:92px;height:92px;border-radius:22px;background:var(--card);display:flex;align-items:center;justify-content:center;box-shadow:0 10px 30px rgba(12,24,48,0.06)}
+    .app-icon{width:86px;height:86px;border-radius:18px;object-fit:cover}
+    .hero-right{flex:1}
+    .title-row{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+    .title{font-size:22px;margin:0;font-weight:800}
+    .badge{background:#efefef;padding:4px 8px;border-radius:8px;font-size:12px;font-weight:700;color:#333}
+    .developer{color:var(--muted);margin:6px 0;font-weight:600}
+    .meta{color:var(--muted);margin-bottom:12px}
+
+    /* Buttons */
+    .actions{display:flex;gap:10px;flex-wrap:wrap}
+    .btn{display:inline-block;padding:10px 18px;border-radius:22px;font-weight:800;text-align:center}
+    .btn.primary{background:var(--blue);color:#fff;box-shadow:0 6px 18px rgba(45,140,255,0.18)}
+    .btn.ghost{background:transparent;border:2px solid rgba(45,140,255,0.12);color:var(--blue)}
+
+    /* Section headings */
+    .section{background:transparent;padding:18px 0;border-top:1px solid #ececec}
+    .section-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
+    .section-head h2{margin:0;font-size:18px;color:var(--text);font-weight:800}
+    .platforms a{margin-left:12px;color:var(--blue);font-weight:700}
+
+    /* Screenshot list (horizontal scroll) */
+    .screenshot-list{display:flex;gap:14px;overflow-x:auto;padding:10px 2px 20px 2px;list-style:none;margin:0;-webkit-overflow-scrolling:touch}
+    .screenshot-list li{flex:0 0 auto;width:82%;max-width:640px}
+    .screenshot-list img{width:100%;height:auto;border-radius:16px;box-shadow:0 14px 36px rgba(14,22,40,0.12);display:block;object-fit:cover}
+
+    /* Big blue gallery heading with shadow */
+    .gallery-heading{
+      font-size:30px;
+      line-height:1.04;
+      text-align:center;
+      color:var(--blue);
+      font-weight:900;
+      margin:22px 0 12px;
+      text-shadow: 0 8px 0 rgba(0,0,0,0.03), 0 12px 22px rgba(45,140,255,0.12);
+      padding:0 8px;
+    }
+
+    /* Horizontal gallery (swipe) - instruction screenshots */
+    .gallery-scroll{display:flex;gap:12px;overflow-x:auto;padding:12px 6px 20px 6px;-webkit-overflow-scrolling:touch}
+.gallery-scroll img{
+  flex:0 0 82%;
+  max-height:420px;         /* Giới hạn chiều cao ảnh */
+  width:auto;
+  border-radius:14px;
+  box-shadow:0 16px 40px rgba(10,20,40,0.12);
+  object-fit:contain;       /* Hiển thị đủ ảnh, không crop */
+  background:#fff;          /* nền trắng nếu ảnh nhỏ hơn khung */
+}
+
+
+    /* Whats new / demo image */
+    .whats-new{padding:6px 0 0 0}
+    .whats-new-title{font-weight:800;text-align:center;color:#203040;margin:8px 0 12px}
+    .demo-image{width:100%;border-radius:12px;border:1px solid #eee;box-shadow:0 12px 32px rgba(8,18,36,0.08);display:block}
+
+    /* Text blocks */
+    .lead-text{color:var(--muted);line-height:1.6}
+    .muted-list{margin:8px 0 0 0;color:var(--muted);line-height:1.6}
+
+    /* Footer */
+    .footer{padding:20px 0;text-align:center;color:var(--muted);font-weight:600}
+    .footer a{color:#ff6a00;text-decoration:none;font-weight:800}
+
+    /* Small screens tweaks */
+    @media (max-width:420px){
+      .title{font-size:20px}
+      .gallery-heading{font-size:26px}
+      .screenshot-list li{width:86%}
+      .gallery-scroll img{flex:0 0 86%}
+    }
+
+    /* Desktop */
+    @media (min-width:900px){
+      .container{padding:28px}
+      .hero{align-items:center}
+      .screenshot-list li{width:33%}
+      .gallery-scroll img{flex:0 0 32%}
+      .gallery-heading{font-size:36px}
+    }
+
+    /* subtle iphone-style rounded bottom toolbar space */
+    .bottom-space{height:72px}
+    /* Loading spinner khi bấm nút */
+.btn.loading {
+  position: relative;
+  pointer-events: none;
+  opacity: 0.8;
+}
+/* Hiệu ứng lắc khi loading */
+@keyframes shake {
+  0% { transform: translateX(0); }
+  20% { transform: translateX(-3px); }
+  40% { transform: translateX(3px); }
+  60% { transform: translateX(-3px); }
+  80% { transform: translateX(3px); }
+  100% { transform: translateX(0); }
+}
+
+.btn.loading {
+  animation: shake 0.5s infinite;
+}
+.link-blue {
+  color:#2d8cff;
+  font-weight:700;
+}
+
+  </style>
+</head>
+<body>
+  <header class="appbar">
+    <div class="appbar-inner">
+      <!-- icon app store -->
+      <img class="appstore-icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/App_Store_%28iOS%29.svg/1024px-App_Store_%28iOS%29.svg.png" alt="App Store">
+      <span class="appbar-title">App Store</span>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Noti -->
+    <section class="hero" aria-label="Thông tin ứng dụng">
+      <div class="app-icon-wrap">
+        <!-- Icon app -->
+        <img class="app-icon" src="https://play-lh.googleusercontent.com/u-HxG-Q1fEpAL9w96iIEaBR0iQOY8yeqDuDvhUTr_J98nfOuAAa7S0B0nkAc0ROnnh555Qp2XYBqbN2FsvyN6p4=w480-h960" alt="Icon">
+      </div>
+
+      <div class="hero-right">
+        <div class="title-row">
+          <h1 class="title">Crack Menu Hack Map</h1>
+          <div class="badge"></div>
+        </div>
+
+        <div class="developer"></div>
+        <div class="meta"><span>Miễn phí</span> · <span>20/11/2025</span></div>
+
+        <div class="actions">
+          <!-- Link button -->
+          <a class="btn primary" href="https://tinyurl.com/mv35enna">Cài Đặt</a>
+                    <a class="btn primary" href="https://github.com/TumadamMod/Lqm/releases/download/kufc/LQMB_1.60.11515852_1763566426.ipa">Tải IPA</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Review -->
+    <section class="section screenshots" aria-label="Screenshot">
+      <div class="section-head">
+        <h2>Xem Trước</h2>
+        <div class="platforms"><a class="active">iPhone</a> <a></a></div>
+      </div>
+
+      <ul class="screenshot-list" role="list">
+        <!-- Ảnh Review -->
+        <li><img src="https://files.catbox.moe/cptzov.mov" alt="screenshot 1"></li>
+        <li><img src="https://raw.githubusercontent.com/TumadamMod/autoup/refs/heads/main/IMG_2136.png" alt="screenshot 2"></li>
+                <li><img src="https://raw.githubusercontent.com/TumadamMod/autoup/refs/heads/main/IMG_2137.png" alt="screenshot 3"></li>
+                        <li><img src="https://raw.githubusercontent.com/TumadamMod/autoup/refs/heads/main/IMG_2138.png" alt="screenshot 4"></li>
+      </ul>
+    </section>
+    <br>Nghiêm Cấm Các Hành Vi Đem Bán,Gắn Key Vào Share Lại,Share Link Không Vượt,...
+    <br>Muốn Share Donate Ad 100K Thì Làm Gì Làm-->Contact: <a class="link-blue" href="https://t.me/tumadam2507">@tumadam2507</a>
+    <!-- Tin cậy -->
+    <section class="section gallery-instructions">
+      <div class="gallery-heading">Hướng Dẫn Tin Cậy</div>
+
+      <div class="gallery-scroll" aria-hidden="false">
+        <!-- tin cậy -->
+        <img src="https://i.imgur.com/56TqnFh.png" alt="Hướng dẫn 1">
+        <img src="https://i.imgur.com/ZiXN2n7.png" alt="Hướng dẫn 2">
+        <img src="https://i.imgur.com/5KIIyuG.png" alt="Hướng dẫn 3">
+      </div>
+    </section>
+
+<!-- cách dùng -->
+<section class="section whats-new">
+  <h3 class="whats-new-title">Hướng Dẫn Sử Dụng</h3>
+  
+  <!-- Video YouTube -->
+  <div class="video-wrapper">
+    <iframe 
+      width="100%" 
+      height="315" 
+      src="https://www.youtube.com/embed/INdj-NICN44" 
+      title="YouTube video player" 
+      frameborder="0" 
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+      allowfullscreen>
+    </iframe>
+  </div>
+
+  <p class="lead-text muted-list">
+    Phiên bản 1.60.1.6<br>
+    Đây Là Sản Phẩm Crack,Không Phải Của Ad Nên Lưu Ý.<br>
+  </p>
+</section>
+
+    <section class="section">
+      <h2>Quyền Riêng Tư Của Ứng Dụng</h2>
+      <p class="lead-text">Nhà phát triển, <strong>Tumadam Mod</strong>, đã cho biết rằng app mod này thật sự rất thú vị và tôi rất thích nó.</p>
+
+      <h3 style="margin-top:18px;font-weight:800">Thông Tin</h3>
+      <p class="muted-list"><strong>Nhà cung cấp</strong><br>Trương Văn Mẫn</p>
+      <p class="muted-list"><strong>Kích cỡ</strong><br>180MB</p>
+      <p class="muted-list"><strong>Danh mục</strong><br>Trò chơi</p>
+    </section>
+
+    <footer class="footer">
+      <p>© 2025 <a href="tumadam.io.vn">Tumadam Mod</a>. All rights reserved.</p>
+    </footer>
+
+    <div class="bottom-space" aria-hidden="true"></div>
+  </main>
+
+  <script>
+    document.querySelectorAll('.platforms a').forEach((el, i) => {
+      el.addEventListener('click', function(e){
+        e.preventDefault();
+        document.querySelectorAll('.platforms a').forEach(a => a.style.opacity=0.6);
+        el.style.opacity = 1;
+      });
+    });
+    
+    document.querySelectorAll('.screenshot-list, .gallery-scroll').forEach(el=>{
+      el.style.scrollSnapType = 'x mandatory';
+      Array.from(el.querySelectorAll('img, li')).forEach(item=>{
+        item.style.scrollSnapAlign = 'center';
+      });
+    });
+    <script>
+  const installBtn = document.querySelector('.btn.primary');
+
+  installBtn.addEventListener('click', function(e){
+    e.preventDefault(); // chặn bấm trực tiếp
+
+    installBtn.textContent = "Đang cài đặt...";
+    installBtn.classList.add("loading");
+
+    // sau 2s chuyển trang
+    setTimeout(() => {
+      window.location.href = installBtn.href;
+    }, 2000);
+  });
+</script>
+<script type='text/javascript' src='//pl26947935.effectivegatecpm.com/a3/ff/2e/a3ff2eb3e4415ce00aed34eeedefbeee.js'></script>
+  </script>
+</body>
+</html>
